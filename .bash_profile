@@ -16,7 +16,7 @@ commit() {
 
 # Stage all files and commit them with message
 commitall() {
-	git add .
+    git add .
     git commit -m "$1"
 }
 
