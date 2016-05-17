@@ -9,8 +9,14 @@ get_git_branch_raw() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
 }
 
-# Commit changes with message
+# Commit staged changes with message
 commit() {
+    git commit -m "$1"
+}
+
+# Stage all files and commit them with message
+commitall() {
+	git add .
     git commit -m "$1"
 }
 
