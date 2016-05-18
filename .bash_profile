@@ -6,12 +6,14 @@ alias reload='source ~/.bash_profile' # Reload .bash_profile
 alias update='wget https://raw.githubusercontent.com/pavelsterba/dotfiles/master/.bash_profile -O ~/.bash_profile; reload' # Update .bash_profile from git
 alias push='git pull; git push origin `get_git_branch_raw`' # Push current branch to origin
 alias master='git checkout master; git pull' # Checkout to master and pull
-alias test='git checkout test; git pull' # Checkout to test and pull
+alias cotest='git checkout test; git pull' # Checkout to test and pull
 
 
 # Git auto completion - https://github.com/bobthecow/git-flow-completion
-source ~/Documents/git-flow-completion.bash
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
+if [ -f ~/Documents/git-flow-completion.bash ]; then
+	source ~/Documents/git-flow-completion.bash
+fi
+if [ -f $(brew --prefix)/etc/bash_completion ] && [ -f /usr/local/bin/brew ]; then
     . $(brew --prefix)/etc/bash_completion
 fi
 
