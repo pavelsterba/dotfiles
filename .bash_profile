@@ -7,7 +7,7 @@ alias push='git pull; git push origin `get_git_branch_raw`' # Push current branc
 alias master='git checkout master; git pull' # Checkout to master and pull
 
 
-# Git auto completion
+# Git auto completion - https://github.com/bobthecow/git-flow-completion
 source ~/Documents/git-flow-completion.bash
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
