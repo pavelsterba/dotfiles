@@ -5,6 +5,7 @@ alias lh='ls -lha' # Complete file list with human readable filesize
 alias reload='source ~/.bash_profile' # Reload .bash_profile
 alias push='git pull; git push origin `get_git_branch_raw`' # Push current branch to origin
 alias master='git checkout master; git pull' # Checkout to master and pull
+alias test='git checkout test; git pull' # Checkout to test and pull
 
 
 # Git auto completion - https://github.com/bobthecow/git-flow-completion
