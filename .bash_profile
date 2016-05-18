@@ -11,10 +11,12 @@ alias cotest='git checkout test; git pull' # Checkout to test and pull
 
 # Git auto completion - https://github.com/bobthecow/git-flow-completion
 if [ -f ~/Documents/git-flow-completion.bash ]; then
-	source ~/Documents/git-flow-completion.bash
+    source ~/Documents/git-flow-completion.bash
 fi
-if [ -f /usr/local/bin/brew ] && [ -f $(brew --prefix)/etc/bash_completion ]; then
-    . $(brew --prefix)/etc/bash_completion
+if [ -f /usr/local/bin/brew ]; then
+    if [ -f $(brew --prefix)/etc/bash_completion ]; then
+        . $(brew --prefix)/etc/bash_completion
+    fi
 fi
 
 
