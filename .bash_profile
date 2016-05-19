@@ -31,13 +31,13 @@ get_git_branch_raw() {
 }
 
 # Commit staged changes with message
-commit() {
+commitstaged() {
     git diff -U0
     git commit -m "$1"
 }
 
 # Stage all files and commit them with message
-commitall() {
+commit() {
     git diff -U0
     git add .
     git commit -m "$1"
