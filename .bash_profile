@@ -31,7 +31,7 @@ get_git_branch_raw() {
 }
 
 # Commit staged changes with message
-commitstaged() {
+commit-staged() {
     git diff -U0
     git commit -m "$1"
 }
