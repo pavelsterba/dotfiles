@@ -6,7 +6,7 @@ alias reload='source ~/.bash_profile' # Reload .bash_profile
 alias update='wget https://raw.githubusercontent.com/pavelsterba/dotfiles/master/.bash_profile -O ~/.bash_profile; reload' # Update .bash_profile from git
 alias push='git branch --set-upstream-to=origin/`get_git_branch_raw` `get_git_branch_raw`; git pull; git push origin `get_git_branch_raw`' # Push current branch to origin
 alias master='git checkout master; git pull' # Checkout to master and pull
-alias cotest='git checkout test; git pull' # Checkout to test and pull
+alias test-checkout='git checkout test; git pull' # Checkout to test and pull
 alias reload-dns='sudo killall -HUP mDNSResponder; sudo dscacheutil -flushcache' # Clear DNS cache
 
 
