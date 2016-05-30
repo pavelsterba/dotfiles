@@ -7,6 +7,7 @@ alias update='wget https://raw.githubusercontent.com/pavelsterba/dotfiles/master
 alias push='git branch --set-upstream-to=origin/`get_git_branch_raw` `get_git_branch_raw`; git pull; git push origin `get_git_branch_raw`' # Push current branch to origin
 alias master='git checkout master; git pull' # Checkout to master and pull
 alias cotest='git checkout test; git pull' # Checkout to test and pull
+alias dnsreload='sudo killall -HUP mDNSResponder; sudo dscacheutil -flushcache' # Clear DNS cache
 
 
 # Git auto completion - https://github.com/bobthecow/git-flow-completion
