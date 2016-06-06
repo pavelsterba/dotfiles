@@ -10,6 +10,7 @@ alias test-checkout='git checkout test; git pull' # Checkout to test and pull
 alias discard='git checkout .' # Discard all changes in current branch
 alias s='git diff -U0; git status' # Display status and changed lines in current branch
 alias reload-dns='sudo killall -HUP mDNSResponder; sudo dscacheutil -flushcache' # Clear DNS cache
+alias ports='netstat -tulnap tcp' # Processes on ports
 
 
 # Git auto completion - https://github.com/bobthecow/git-flow-completion
