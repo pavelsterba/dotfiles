@@ -53,3 +53,8 @@ create-branch() {
     git pull
     git checkout -b $1
 }
+
+# Create directory and enter it
+mkdcd() {
+    mkdir $1 && cd $1
+}
