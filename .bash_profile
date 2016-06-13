@@ -7,7 +7,7 @@ alias update='wget https://raw.githubusercontent.com/pavelsterba/dotfiles/master
 alias push='git branch --set-upstream-to=origin/`get_git_branch_raw` `get_git_branch_raw`; git pull; git push origin `get_git_branch_raw`' # Push current branch to origin
 alias master='git checkout master; git pull' # Checkout to master and pull
 alias test-checkout='git checkout test; git pull' # Checkout to test and pull
-alias discard='git checkout .; git clean -fd' # Discard all changes in current branch
+alias discard='git checkout .; git stash save -u; git stash drop "stash@{0}"' # Discard all changes in current branch
 alias s='git diff -U0; git status' # Display status and changed lines in current branch
 alias reload-dns='sudo killall -HUP mDNSResponder; sudo dscacheutil -flushcache' # Clear DNS cache
 alias ports='netstat -tulnap tcp' # Processes on ports
