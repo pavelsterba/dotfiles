@@ -58,3 +58,24 @@ create-branch() {
 mkdcd() {
     mkdir $1 && cd $1
 }
+
+# Merge current branch to master
+merge-to-master() {
+    PSDFCURRENTBRANCH=`get_git_branch_raw`
+    git branch --set-upstream-to=origin/$PSDFCURRENTBRANCH $PSDFCURRENTBRANCH
+    git pull
+    git rebase -i master
+    git checkout master
+    git pull
+    git merge --no-ff $PSDFCURRENTBRANCH
+}
+
+# Merge current branch to test
+merge-to-test() {
+    PSDFCURRENTBRANCH=`get_git_branch_raw`
+    git branch --set-upstream-to=origin/$PSDFCURRENTBRANCH $PSDFCURRENTBRANCH
+    git pull
+    git checkout test
+    git pull
+    git merge $PSDFCURRENTBRANCH
+}
