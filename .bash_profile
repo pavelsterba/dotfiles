@@ -70,7 +70,7 @@ merge-to-master() {
     PSDFCURRENTBRANCH=`get_git_branch_raw`
     git branch --set-upstream-to=origin/$PSDFCURRENTBRANCH $PSDFCURRENTBRANCH
     git pull
-    git rebase -i master
+    git rebase -i origin/master
     git checkout master
     git pull
     git merge --no-ff $PSDFCURRENTBRANCH
