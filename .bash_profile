@@ -24,6 +24,12 @@ if [ -f /usr/local/bin/brew ]; then
 fi
 
 
+# Aliases and script for work
+if [ -f ~/.bash_profile_work ]; then
+    source ~/.bash_profile_work
+fi
+
+
 # Get current git branch
 get_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ [\1]/'
