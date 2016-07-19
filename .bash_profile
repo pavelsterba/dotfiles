@@ -85,3 +85,10 @@ merge-to-test() {
     git pull
     git merge $PSDFCURRENTBRANCH
 }
+
+# Delete current branch
+delete-branch() {
+    PSDFCURRENTBRANCH=`get_git_branch_raw`
+    git checkout master
+    git branch -D $PSDFCURRENTBRANCH
+}
