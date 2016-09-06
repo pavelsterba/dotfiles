@@ -24,9 +24,14 @@ if [ -f /usr/local/bin/brew ]; then
 fi
 
 
-# Aliases and script for work
+# Aliases and scripts for work
 if [ -f ~/.bash_profile_work ]; then
     source ~/.bash_profile_work
+fi
+
+# Aliases and scripts for Docker
+if [ -f ~/.bash_profile_docker ]; then
+    source ~/.bash_profile_docker
 fi
 
 

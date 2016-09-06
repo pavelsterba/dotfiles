@@ -1,0 +1,22 @@
+alias dps='docker ps -a' # List all docker containers
+alias dim='docker images' # List all docker images
+
+
+# Build docker image from current directory
+dkr-build() {
+    docker build -t $1 .
+}
+
+# Run bash for given container
+dkr-bash() {
+    docker exec -it $1 bash
+}
+
+# Stop and remove container and remove related image
+dkr-rm() {
+    PSDFDOCKERIMAGENAME=`docker ps -a --format "{{.ID}} {{.Image}}" | grep $1 | cut -f 2 -d " "`
+    PSDFDOCKERIMAGEID=`docker images --format "{{.ID}}" $PSDFDOCKERIMAGENAME`
+    docker kill $1
+    docker rm $1
+    docker rmi $PSDFDOCKERIMAGEID
+}
