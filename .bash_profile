@@ -34,6 +34,11 @@ if [ -f ~/.bash_profile_docker ]; then
     source ~/.bash_profile_docker
 fi
 
+# Aliases and scripts for nginx
+if [ -f ~/.bash_profile_nginx ]; then
+    source ~/.bash_profile_nginx
+fi
+
 
 # Get current git branch
 get_git_branch() {

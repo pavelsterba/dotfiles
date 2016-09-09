@@ -1,0 +1,17 @@
+alias ngstart='sudo service nginx start' # Start nginx
+alias ngstop='sudo service nginx stop' # Stop nginx
+alias ngrl='sudo service nginx reload' # Reload nginx configuration
+alias ngrs='sudo service nginx restart' # Restart nginx
+
+
+# Link config from sites-available to sites-enabled and reload configuration
+enable-site() {
+    sudo ln -s /etc/nginx/sites-available/$1 /etc/nginx/sites-enabled/$1
+    ngrl
+}
+
+# Unlink config from sites-enabled to disable it and reload configuration
+disable-site() {
+    sudo unlink /etc/nginx/sites-enabled/$1
+    ngrl
+}
