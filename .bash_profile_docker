@@ -20,3 +20,8 @@ dkr-rm() {
     docker rm $1
     docker rmi $PSDFDOCKERIMAGEID
 }
+
+# Show and follow logs for container
+dkrl() {
+    docker logs -f --tail 50 $1
+}
