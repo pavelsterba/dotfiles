@@ -11,6 +11,7 @@ alias discard='git stash save -u; git stash drop "stash@{0}"' # Discard all chan
 alias s='git diff -U0; git status' # Display status and changed lines in current branch
 alias reload-dns='sudo killall -HUP mDNSResponder; sudo dscacheutil -flushcache' # Clear DNS cache
 alias ports='netstat -tulnap tcp' # Processes on ports
+alias venv='. venv/bin/activate' # Activate virtualenv
 
 
 # Git auto completion - https://github.com/bobthecow/git-flow-completion
