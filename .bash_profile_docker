@@ -1,5 +1,6 @@
 alias dps='docker ps -a' # List all docker containers
 alias dim='docker images' # List all docker images
+alias dme='eval $(docker-machine env)' # Configure shell for Docker (Mac OS)
 
 
 # Build docker image from current directory
@@ -24,4 +25,8 @@ dkr-rm() {
 # Show and follow logs for container
 dkrl() {
     docker logs -f --tail 50 $1
+}
+
+dm() {
+    docker-machine $@
 }
