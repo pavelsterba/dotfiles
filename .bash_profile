@@ -1,5 +1,12 @@
-export PS1="\033[90m\u@\h\033[0m \033[01m\W\033[0m\033[32m\$(get_git_branch)\033[0m $ "
-
+export PS1="\[\033[90m\]\u@\h\[\033[0m\] \[\033[01m\]\W\[\033[0m\]\[\033[32m\]\$(get_git_branch)\[\033[0m\] $ "
+export LANG="cs_CZ.UTF-8"
+export LC_COLLATE="cs_CZ.UTF-8"
+export LC_CTYPE="cs_CZ.UTF-8"
+export LC_MESSAGES="cs_CZ.UTF-8"
+export LC_MONETARY="cs_CZ.UTF-8"
+export LC_NUMERIC="cs_CZ.UTF-8"
+export LC_TIME="cs_CZ.UTF-8"
+export LC_ALL=
 
 alias lh='ls -lhaG' # Complete file list with human readable filesize
 alias reload='source ~/.bash_profile' # Reload .bash_profile
