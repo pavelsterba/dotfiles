@@ -15,7 +15,8 @@ alias push='git branch --set-upstream-to=origin/`get_git_branch_raw` `get_git_br
 alias master='git checkout master; git pull' # Checkout to master and pull
 alias test-checkout='git checkout test; git pull' # Checkout to test and pull
 alias discard='git stash save -u; git stash drop "stash@{0}"' # Discard all changes in current branch
-alias s='git diff -U0; git status' # Display status and changed lines in current branch
+alias s='git status' # Display status in current branch
+alias ss='git diff -U0; git status' # Display status and changed lines in current branch
 alias reload-dns='sudo killall -HUP mDNSResponder; sudo dscacheutil -flushcache' # Clear DNS cache
 alias ports='netstat -tulnap tcp' # Processes on ports
 alias venv='. venv/bin/activate' # Activate virtualenv
